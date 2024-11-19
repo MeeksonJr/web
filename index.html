@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Introduction Section -->
+        <div id="intro">
+            <h1>Welcome to Your Private Library</h1>
+            <p>
+                Step into a world of knowledge, where books come to life. This is your personal library, where you can manage and explore your collection.
+                Use the options below to interact with your books, update your library, and manage patrons. Ready to begin? Let's dive into the world of endless stories!
+            </p>
+            <p>
+                Your journey awaits. From searching books to managing check-ins and check-outs, everything is just a click away.
+            </p>
+        </div>
+
+        <!-- Menu Section -->
+        <div class="menu">
+            <button onclick="printLibraryBooks()">Print Library Books</button>
+            <button onclick="searchBook()">Search Book</button>
+            <button onclick="updateBookCopies()">Update Book Copies</button>
+            <button onclick="printAllBooks()">Print All Books</button>
+            <button onclick="enterPatronInfo()">Enter Patron Info</button>
+            <button onclick="checkOutBook()">Library Patron Check Out</button>
+            <button onclick="checkInBook()">Library Patron Check In</button>
+            <button onclick="printAllPatrons()">Print All Patrons and Their Books</button>
+            <button id="reload" onclick="exitProgram()">Exit Program</button>
+        </div>        
+
+        <!-- Content Section -->
+        <div id="content"></div>
+
+        <!-- File Input Section -->
+        <div class="file-input">
+            <input type="file" id="fileInput" onchange="loadBooksFromFile(event)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
